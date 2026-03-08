@@ -41,19 +41,19 @@ Select * from Orders;
 
 -- Import Data from csv into Books Table
 copy Books(Book_ID, Title, Author, Genre, Published_Year, Price, Stock)
-from 'D:\Excels Project\PostgreSQL practice\SQL Project\Books.csv'
+from 'C:\YOUR_PATH\CSV_Datasets\Books.csv'
 CSV Header;
 
 -- Import Data from csv into Customers Table
 copy Customers(Customer_ID, Name, Email, Phone, City, Country)
-from 'D:\Excels Project\PostgreSQL practice\SQL Project\Customers.csv'
+from 'C:\YOUR_PATH\CSV_Datasets\Customers.csv'
 CSV Header;
 
 -- Import Data from csv into Orders Table
 copy Orders(Order_ID, Customer_ID, Book_ID, Order_Date, Quantity, Total_Amount)
-from 'D:\Excels Project\PostgreSQL practice\SQL Project\Orders.csv'
+from 'C:\YOUR_PATH\CSV_Datasets\Orders.csv'
 CSV Header;
-
+-- Note: Update the path Above to your local 'CSV_Datasets' folder path
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Retrieve all books in the "Fiction" genre
 Select * from books 
@@ -173,4 +173,5 @@ order by b.book_id;
 Select * from Books;
 Select * from Customers;
 Select * from Orders;
+
 
